@@ -19,5 +19,18 @@ public class Tester {
 		husky.hug();
 		TeddyBear ted = new TeddyBear();
 		ted.hug();
+
+		Dog v1 = new Husky();
+		Husky v2 = (Husky)v1;
+		Huggable v3 = new Husky();
+		Huggable v4 = new TeddyBear();
+
+		ArrayList<Huggable> hugList = new ArrayList<Huggable>();
+		hugList.add(new Husky());
+		hugList.add(new TeddyBear());
+
+		for(Huggable thing : hugList) { //enhanced for loop ("foreach" loop)
+		    thing.hug();
+		}
 	}
 }
